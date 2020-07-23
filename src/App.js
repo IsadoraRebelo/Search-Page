@@ -5,8 +5,10 @@ function App() {
   const [Query, setQuery] = useState('');
   const [Images, setImages] = useState([]);
 
+// Future update, pagination.
+/*  const [pageNumber, setpageNumber] = useState(1);
   const [prevPage, setprevPage] = useState({});
-  const [nextPage, setnextPage] = useState({});
+  const [nextPage, setnextPage] = useState({}); */
 
 
 useEffect(() => {
@@ -44,9 +46,9 @@ const renderImages = () => {
 };
 
   return (
+	<div> 
 	<header className="container-header"> 
 	<a href="https://pixabay.com/" className="pixabay-logo"> </a>
-	<div> 
 	<label htmlFor="search-input" className="search-label"> 
     <input 
     	type="text"
@@ -57,8 +59,14 @@ const renderImages = () => {
     	onChange={inputChange} />
     	<i className="fa fa-search search-icon"/>
     </label>
-	{ renderImages () } </div>
-    <h2> Image Search </h2></header>    
+    <h2> Image Search </h2>
+	</header>
+	{ renderImages () } 
+	<h2 className="madeby">
+	This page was made by Isadora Rebelo <br></br> 
+	you can sneak peek on the code <a href="https://github.com/IsadoraRebelo/Search-Page">clicking here</a>. 
+	</h2> </div>
+	
   );
 }
 

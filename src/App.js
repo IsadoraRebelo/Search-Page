@@ -13,11 +13,8 @@ useEffect(() => {
 	async function getImages() {
 		let response = await fetch(`https://pixabay.com/api/?key=17564121-870a14721f28b8246a1c9583d&q=${Query}`);
 		let result = await response.json()
-		console.log(result);
-		console.log(Query);
 		setImages(result.hits);
 	}
-	console.warn("here");
 	getImages();
 }, [Query]);
 

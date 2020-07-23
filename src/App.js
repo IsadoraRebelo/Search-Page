@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './App.css';
 
 function App() {
-  const [Query, setQuery] = useState('rio de janeiro');
+  const [Query, setQuery] = useState('');
   const [Images, setImages] = useState([]);
 
   const [prevPage, setprevPage] = useState({});
